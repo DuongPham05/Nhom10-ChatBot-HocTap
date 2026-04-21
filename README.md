@@ -1,5 +1,5 @@
 # Nhom10-ChatBot-HocTap
-Xây dựng chatbot hỗ trợ lên kế hoạch, lộ trình học tập
+Xây dựng chatbot hỗ trợ lên kế hoạch, lộ trình học tập,hiệu quả cao và chính xác.
 #  Study Planner Chatbot
 
 Chatbot AI hỗ trợ lập kế hoạch và lộ trình học tập cá nhân hóa.
