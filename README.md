@@ -7,75 +7,64 @@ Chatbot AI hỗ trợ lập kế hoạch và lộ trình học tập cá nhân h
 ##  Cấu trúc thư mục
 
 ```
-study-planner-chatbot/
-├── public/                         # Static assets
-│   ├── index.html
-│   └── favicon.ico
-├── src/
-│   ├── api/                        # Giao tiếp với Anthropic API
-│   │   ├── anthropic.js            # Cấu hình & gọi Claude API
-│   │   └── prompts.js              # System prompts cho từng chức năng
-│   │
-│   ├── components/
-│   │   ├── Chat/                   # Module chatbot chính
-│   │   │   ├── ChatWindow.jsx      # Cửa sổ chat chính
-│   │   │   ├── MessageBubble.jsx   # Hiển thị từng tin nhắn
-│   │   │   ├── InputBar.jsx        # Thanh nhập liệu
-│   │   │   └── TypingIndicator.jsx # Hiệu ứng đang gõ
-│   │   │
-│   │   ├── Roadmap/                # Lộ trình học tập
-│   │   │   ├── RoadmapView.jsx     # Hiển thị roadmap dạng timeline
-│   │   │   ├── RoadmapNode.jsx     # Từng node trong roadmap
-│   │   │   └── RoadmapExport.jsx   # Xuất roadmap ra PDF/PNG
-│   │   │
-│   │   ├── Planner/                # Kế hoạch học theo tuần/tháng
-│   │   │   ├── WeeklyPlanner.jsx   # Lịch học theo tuần
-│   │   │   ├── TaskCard.jsx        # Card nhiệm vụ học tập
-│   │   │   ├── ProgressBar.jsx     # Thanh tiến độ
-│   │   │   └── StudyTimer.jsx      # Pomodoro timer
-│   │   │
-│   │   └── Dashboard/              # Tổng quan & thống kê
-│   │       ├── StatsPanel.jsx      # Thống kê tiến độ
-│   │       ├── GoalTracker.jsx     # Theo dõi mục tiêu
-│   │       └── StreakCounter.jsx   # Đếm chuỗi ngày học
-│   │
-│   ├── hooks/                      # Custom React Hooks
-│   │   ├── useChat.js              # Quản lý state chat
-│   │   ├── useRoadmap.js           # Logic tạo & lưu roadmap
-│   │   ├── usePlanner.js           # Logic kế hoạch học
-│   │   └── useLocalStorage.js      # Lưu dữ liệu local
-│   │
-│   ├── utils/                      # Tiện ích
-│   │   ├── dateHelpers.js          # Xử lý ngày tháng
-│   │   ├── parseRoadmap.js         # Parse JSON roadmap từ AI
-│   │   └── studySubjects.js        # Danh sách môn học mẫu
-│   │
-│   ├── styles/                     # Global styles
-│   │   ├── globals.css
-│   │   └── variables.css           # CSS custom properties
-│   │
-│   ├── pages/                      # Các trang chính
-│   │   ├── HomePage.jsx
-│   │   ├── ChatPage.jsx
-│   │   ├── RoadmapPage.jsx
-│   │   └── PlannerPage.jsx
-│   │
-│   └── App.jsx                     # Root component
+study-planner-desktop/
+├── resources/
+│   ├── icons/
+│   ├── images/
+│   ├── styles/app.qss
+│   └── resources.qrc          ← thêm
 │
-├── docs/
-│   ├── architecture.md             # Kiến trúc hệ thống
-│   ├── api-reference.md            # Tài liệu API
-│   └── prompt-engineering.md       # Thiết kế prompt
+├── forms/                     ← giữ nguyên (tốt)
+│
+├── src/
+│   ├── api/
+│   │   ├── anthropic_client.py
+│   │   ├── api_worker.py      ← thêm (QThread, BẮT BUỘC)
+│   │   ├── prompts.py
+│   │   └── exceptions.py      ← thêm
+│   │
+│   ├── controllers/
+│   │   ├── base_controller.py ← thêm
+│   │   ├── chat_controller.py
+│   │   ├── roadmap_controller.py
+│   │   └── planner_controller.py
+│   │
+│   ├── models/
+│   │   ├── message.py
+│   │   ├── task.py
+│   │   ├── roadmap_node.py
+│   │   ├── app_state.py       ← thêm (singleton state)
+│   │   └── settings.py        ← thêm (QSettings wrapper)
+│   │
+│   ├── views/
+│   │   ├── components/        ← thêm (widget tái sử dụng)
+│   │   ├── dialogs/           ← thêm (QDialog)
+│   │   ├── chat/
+│   │   ├── roadmap/
+│   │   ├── planner/
+│   │   └── dashboard/
+│   │
+│   ├── utils/
+│   │   ├── date_helpers.py
+│   │   ├── parse_roadmap.py
+│   │   ├── study_subjects.py
+│   │   └── logger.py          ← thêm
+│   │
+│   ├── config.py              ← thêm (BẮT BUỘC)
+│   └── resources_rc.py
 │
 ├── tests/
-│   ├── chat.test.js
-│   ├── roadmap.test.js
-│   └── planner.test.js
+│   ├── conftest.py            ← thêm (pytest fixtures)
+│   ├── test_chat.py
+│   ├── test_roadmap.py
+│   └── test_planner.py
 │
-├── .env.example                    # Mẫu biến môi trường
-├── package.json
+├── docs/
+├── .env.example
+├── requirements.txt
+├── pyproject.toml             ← thêm
+├── main.py
 └── README.md
-```
 
 ##  Chức năng chính
 
