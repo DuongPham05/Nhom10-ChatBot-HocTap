@@ -1,10 +1,10 @@
 # Nhom10-ChatBot-HocTap
 Xây dựng chatbot hỗ trợ lên kế hoạch, lộ trình học tập
-# 📚 Study Planner Chatbot
+#  Study Planner Chatbot
 
 Chatbot AI hỗ trợ lập kế hoạch và lộ trình học tập cá nhân hóa.
 
-## 🗂️ Cấu trúc thư mục
+##  Cấu trúc thư mục
 
 ```
 study-planner-chatbot/
@@ -77,12 +77,12 @@ study-planner-chatbot/
 └── README.md
 ```
 
-## 🚀 Chức năng chính
+##  Chức năng chính
 
 | Chức năng | Mô tả |
 |-----------|-------|
-| 💬 **Chat AI** | Hỏi đáp về lộ trình, gợi ý tài liệu, giải đáp thắc mắc |
-| 🗺️ **Tạo Roadmap** | Sinh lộ trình học tự động theo mục tiêu & trình độ |
-| 📅 **Weekly Planner** | Lập lịch học chi tiết theo tuần |
-| 📊 **Dashboard** | Theo dõi tiến độ & thống kê học tập |
-| ⏱️ **Study Timer** | Pomodoro timer tích hợp |
+|  **Chat AI** | Hỏi đáp về lộ trình, gợi ý tài liệu, giải đáp thắc mắc |
+|  **Tạo Roadmap** | Sinh lộ trình học tự động theo mục tiêu & trình độ |
+|  **Weekly Planner** | Lập lịch học chi tiết theo tuần |
+|  **Dashboard** | Theo dõi tiến độ & thống kê học tập |
+|  **Study Timer** | Pomodoro timer tích hợp |
