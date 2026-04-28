@@ -3,7 +3,7 @@ Xây dựng chatbot hỗ trợ lên kế hoạch, lộ trình học tập,hiệu
 #  Study Planner Chatbot
 
 Chatbot AI hỗ trợ lập kế hoạch và lộ trình học tập cá nhân hóa.
-
+sk-de5c482203bd4158bdcc06c1c10ed3f4
 ##  Cấu trúc thư mục
 
 ```
