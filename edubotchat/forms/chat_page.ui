@@ -156,7 +156,7 @@
           QListWidget::item:selected {
             background-color: #ebf4ff;
             color: #2b6cb0;
-            font-weight: 530;
+            font-weight: 550;
           }
          </string>
         </property>
