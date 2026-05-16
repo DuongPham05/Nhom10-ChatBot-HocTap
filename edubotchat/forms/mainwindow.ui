@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>EduBot - Chatbot Hỗ Trợ Học Tập</string>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1100</width>
+    <height>700</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="mainLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+  <number>0</number>
+ </property>
+ <property name="topMargin">
+  <number>0</number>
+ </property>
+ <property name="rightMargin">
+  <number>0</number>
+ </property>
+ <property name="bottomMargin">
+  <number>0</number>
+ </property>
+    <!-- Sidebar Navigation -->
+    <item>
+     <widget class="QWidget" name="sidebar">
+      <property name="minimumWidth">
+       <number>220</number>
+      </property>
+      <property name="maximumWidth">
+       <number>220</number>
+      </property>
+      <property name="styleSheet">
+       <string>
+        QWidget#sidebar {
+          background-color: #1a1f2e;
+        }
+       </string>
+      </property>
+      <layout class="QVBoxLayout" name="sidebarLayout">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <property name="leftMargin">
+  <number>12</number>
+ </property>
+ <property name="topMargin">
+  <number>12</number>
+ </property>
+ <property name="rightMargin">
+  <number>12</number>
+ </property>
+ <property name="bottomMargin">
+  <number>12</number>
+ </property>
+       <!-- Logo -->
+       <item>
+        <widget class="QLabel" name="logoLabel">
+         <property name="text">
+          <string>🎓 EduBot</string>
+         </property>
+         <property name="styleSheet">
+          <string>
+           QLabel {
+             color: #ffffff;
+             font-size: 22px;
+             font-weight: bold;
+             padding: 10px 0px 20px 0px;
+           }
+          </string>
+         </property>
+        </widget>
+       </item>
+       <!-- Nav Buttons -->
+       <item>
+        <widget class="QPushButton" name="btnDashboard">
+         <property name="text">
+          <string>📊  Tổng Quan</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string>
+           QPushButton {
+             background-color: transparent;
+             color: #a0aec0;
+             border: none;
+             border-radius: 8px;
+             padding: 12px 16px;
+             text-align: left;
+             font-size: 14px;
+           }
+           QPushButton:checked, QPushButton:hover {
+             background-color: #2d3748;
+             color: #ffffff;
+           }
+          </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnChat">
+         <property name="text">
+          <string>💬  Chat với AI</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string>
+           QPushButton {
+             background-color: transparent;
+             color: #a0aec0;
+             border: none;
+             border-radius: 8px;
+             padding: 12px 16px;
+             text-align: left;
+             font-size: 14px;
+           }
+           QPushButton:checked, QPushButton:hover {
+             background-color: #2d3748;
+             color: #ffffff;
+           }
+          </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnPlanner">
+         <property name="text">
+          <string>📅  Lịch Học</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string>
+           QPushButton {
+             background-color: transparent;
+             color: #a0aec0;
+             border: none;
+             border-radius: 8px;
+             padding: 12px 16px;
+             text-align: left;
+             font-size: 14px;
+           }
+           QPushButton:checked, QPushButton:hover {
+             background-color: #2d3748;
+             color: #ffffff;
+           }
+          </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRoadmap">
+         <property name="text">
+          <string>🗺️  Lộ Trình</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string>
+           QPushButton {
+             background-color: transparent;
+             color: #a0aec0;
+             border: none;
+             border-radius: 8px;
+             padding: 12px 16px;
+             text-align: left;
+             font-size: 14px;
+           }
+           QPushButton:checked, QPushButton:hover {
+             background-color: #2d3748;
+             color: #ffffff;
+           }
+          </string>
+         </property>
+        </widget>
+       </item>
+       <!-- Spacer -->
+       <item>
+        <spacer name="sidebarSpacer">
+   <property name="sizeHint" stdset="0">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </spacer>
+       </item>
+       <!-- User Profile -->
+       <item>
+        <widget class="QFrame" name="userFrame">
+         <property name="styleSheet">
+          <string>
+           QFrame {
+             background-color: #2d3748;
+             border-radius: 10px;
+             padding: 8px;
+           }
+          </string>
+         </property>
+         <layout class="QHBoxLayout" name="userLayout">
+          <property name="leftMargin">
+  <number>8</number>
+ </property>
+ <property name="topMargin">
+  <number>8</number>
+ </property>
+ <property name="rightMargin">
+  <number>8</number>
+ </property>
+ <property name="bottomMargin">
+  <number>8</number>
+ </property>
+          <item>
+           <widget class="QLabel" name="avatarLabel">
+            <property name="text">
+             <string>👤</string>
+            </property>
+            <property name="styleSheet">
+             <string>font-size: 24px;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="userNameLabel">
+              <property name="text">
+               <string>Học Sinh</string>
+              </property>
+              <property name="styleSheet">
+               <string>color: #ffffff; font-size: 13px; font-weight: bold;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="userRoleLabel">
+              <property name="text">
+               <string>Học sinh</string>
+              </property>
+              <property name="styleSheet">
+               <string>color: #718096; font-size: 11px;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnSettings">
+            <property name="text">
+             <string>⚙</string>
+            </property>
+            <property name="styleSheet">
+             <string>
+              QPushButton {
+                background: transparent;
+                border: none;
+                color: #718096;
+                font-size: 16px;
+              }
+              QPushButton:hover { color: #ffffff; }
+             </string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <!-- Main Content Stack -->
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string>background-color: #f7f8fc;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNewChat"/>
+    <addaction name="actionExport"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Trợ Giúp</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNewChat">
+   <property name="text">
+    <string>Chat Mới</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="text">
+    <string>Xuất Lịch Sử</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Thoát</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>Giới Thiệu</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DashboardPage</class>
+ <widget class="QWidget" name="DashboardPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1060</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Tổng Quan</string>
+  </property>
+  <property name="styleSheet">
+   <string>
+    QWidget {
+      background-color: #f7f8fc;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #2d3748;
+    }
+    QLabel#pageTitle {
+      color: #1a1f2e;
+      font-size: 26px;
+      font-weight: bold;
+    }
+    QLabel#pageSubtitle {
+      color: #718096;
+      font-size: 14px;
+    }
+    /* Stat Cards */
+    QFrame.statCard {
+      background-color: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+    /* Section Titles */
+    QLabel.sectionTitle {
+      color: #2d3748;
+      font-size: 16px;
+      font-weight: bold;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="dashboardLayout">
+   <property name="spacing">
+    <number>20</number>
+   </property>
+   <property name="leftMargin">
+  <number>32</number>
+ </property>
+ <property name="topMargin">
+  <number>32</number>
+ </property>
+ <property name="rightMargin">
+  <number>32</number>
+ </property>
+ <property name="bottomMargin">
+  <number>32</number>
+ </property>
+   <!-- Header -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <layout class="QVBoxLayout">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="pageTitle">
+         <property name="text">
+          <string>Xin chào, Học Sinh! 👋</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="pageSubtitle">
+         <property name="text">
+          <string>Hôm nay bạn muốn học gì?</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer>
+   <property name="sizeHint" stdset="0">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+      </spacer>
+     </item>
+     <!-- Date Display -->
+     <item>
+      <widget class="QLabel" name="dateLabel">
+       <property name="text">
+        <string>Thứ 3, 28/04/2026</string>
+       </property>
+       <property name="styleSheet">
+        <string>color: #4a5568; font-size: 13px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 8px 14px;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <!-- Stat Cards Row -->
+   <item>
+    <layout class="QHBoxLayout" name="statsRow">
+     <property name="spacing">
+      <number>16</number>
+     </property>
+     <!-- Card 1: Phiên Chat -->
+     <item>
+      <widget class="QFrame" name="cardChat">
+       <property name="minimumHeight">
+        <number>110</number>
+       </property>
+       <property name="styleSheet">
+        <string>
+         QFrame {
+           background: qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #4facfe,stop:1 #00f2fe);
+           border-radius: 14px;
+         }
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <property name="leftMargin">
+  <number>20</number>
+ </property>
+ <property name="topMargin">
+  <number>20</number>
+ </property>
+ <property name="rightMargin">
+  <number>20</number>
+ </property>
+ <property name="bottomMargin">
+  <number>20</number>
+ </property>
+        <item>
+         <widget class="QLabel">
+          <property name="text">
+           <string>💬  Phiên Chat</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: rgba(255,255,255,0.85); font-size: 13px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="chatCountLabel">
+          <property name="text">
+           <string>24</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: #ffffff; font-size: 32px; font-weight: bold;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel">
+          <property name="text">
+           <string>Tháng này</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: rgba(255,255,255,0.75); font-size: 11px;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <!-- Card 2: Câu Hỏi -->
+     <item>
+      <widget class="QFrame" name="cardQuestions">
+       <property name="minimumHeight">
+        <number>110</number>
+       </property>
+       <property name="styleSheet">
+        <string>
+         QFrame {
+           background: qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #43e97b,stop:1 #38f9d7);
+           border-radius: 14px;
+         }
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <property name="leftMargin">
+  <number>20</number>
+ </property>
+ <property name="topMargin">
+  <number>20</number>
+ </property>
+ <property name="rightMargin">
+  <number>20</number>
+ </property>
+ <property name="bottomMargin">
+  <number>20</number>
+ </property>
+        <item>
+         <widget class="QLabel">
+          <property name="text">
+           <string>❓  Câu Hỏi</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: rgba(255,255,255,0.85); font-size: 13px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="questionCountLabel">
+          <property name="text">
+           <string>187</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: #ffffff; font-size: 32px; font-weight: bold;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel">
+          <property name="text">
+           <string>Đã hỏi AI</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: rgba(255,255,255,0.75); font-size: 11px;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <!-- Card 3: Nhiệm Vụ -->
+     <item>
+      <widget class="QFrame" name="cardTasks">
+       <property name="minimumHeight">
+        <number>110</number>
+       </property>
+       <property name="styleSheet">
+        <string>
+         QFrame {
+           background: qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #fa709a,stop:1 #fee140);
+           border-radius: 14px;
+         }
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <property name="leftMargin">
+  <number>20</number>
+ </property>
+ <property name="topMargin">
+  <number>20</number>
+ </property>
+ <property name="rightMargin">
+  <number>20</number>
+ </property>
+ <property name="bottomMargin">
+  <number>20</number>
+ </property>
+        <item>
+         <widget class="QLabel">
+          <property name="text">
+           <string>✅  Nhiệm Vụ</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: rgba(255,255,255,0.85); font-size: 13px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="taskCountLabel">
+          <property name="text">
+           <string>12/15</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: #ffffff; font-size: 32px; font-weight: bold;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel">
+          <property name="text">
+           <string>Hoàn thành</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: rgba(255,255,255,0.75); font-size: 11px;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <!-- Card 4: Streak -->
+     <item>
+      <widget class="QFrame" name="cardStreak">
+       <property name="minimumHeight">
+        <number>110</number>
+       </property>
+       <property name="styleSheet">
+        <string>
+         QFrame {
+           background: qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #a18cd1,stop:1 #fbc2eb);
+           border-radius: 14px;
+         }
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <property name="leftMargin">
+  <number>20</number>
+ </property>
+ <property name="topMargin">
+  <number>20</number>
+ </property>
+ <property name="rightMargin">
+  <number>20</number>
+ </property>
+ <property name="bottomMargin">
+  <number>20</number>
+ </property>
+        <item>
+         <widget class="QLabel">
+          <property name="text">
+           <string>🔥  Streak</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: rgba(255,255,255,0.85); font-size: 13px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="streakCountLabel">
+          <property name="text">
+           <string>7 ngày</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: #ffffff; font-size: 32px; font-weight: bold;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel">
+          <property name="text">
+           <string>Học liên tiếp</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: rgba(255,255,255,0.75); font-size: 11px;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <!-- Bottom Row: Quick Actions + Recent Chats -->
+   <item>
+    <layout class="QHBoxLayout" name="bottomRow">
+     <property name="spacing">
+      <number>20</number>
+     </property>
+     <!-- Quick Actions Panel -->
+     <item>
+      <widget class="QFrame" name="quickActionsFrame">
+       <property name="minimumWidth">
+        <number>300</number>
+       </property>
+       <property name="styleSheet">
+        <string>
+         QFrame {
+           background-color: #ffffff;
+           border-radius: 14px;
+           border: 1px solid #e2e8f0;
+         }
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <property name="leftMargin">
+  <number>20</number>
+ </property>
+ <property name="topMargin">
+  <number>20</number>
+ </property>
+ <property name="rightMargin">
+  <number>20</number>
+ </property>
+ <property name="bottomMargin">
+  <number>20</number>
+ </property>
+        <property name="spacing">
+         <number>12</number>
+        </property>
+        <item>
+         <widget class="QLabel">
+          <property name="text">
+           <string>⚡ Truy Cập Nhanh</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: #2d3748; font-size: 15px; font-weight: bold;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnNewChatQuick">
+          <property name="text">
+           <string>💬  Bắt Đầu Chat Mới</string>
+          </property>
+          <property name="minimumHeight">
+           <number>44</number>
+          </property>
+          <property name="styleSheet">
+           <string>
+            QPushButton {
+              background-color: #4a6cf7;
+              color: white;
+              border: none;
+              border-radius: 10px;
+              font-size: 14px;
+              font-weight: 500;
+              text-align: left;
+              padding-left: 16px;
+            }
+            QPushButton:hover {
+              background-color: #3b5bdb;
+            }
+            QPushButton:pressed {
+              background-color: #2f4ac7;
+            }
+           </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnPlannerQuick">
+          <property name="text">
+           <string>📅  Xem Lịch Học Hôm Nay</string>
+          </property>
+          <property name="minimumHeight">
+           <number>44</number>
+          </property>
+          <property name="styleSheet">
+           <string>
+            QPushButton {
+              background-color: #f0fff4;
+              color: #276749;
+              border: 1.5px solid #9ae6b4;
+              border-radius: 10px;
+              font-size: 14px;
+              text-align: left;
+              padding-left: 16px;
+            }
+            QPushButton:hover { background-color: #c6f6d5; }
+           </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnRoadmapQuick">
+          <property name="text">
+           <string>🗺️  Xem Lộ Trình Học</string>
+          </property>
+          <property name="minimumHeight">
+           <number>44</number>
+          </property>
+          <property name="styleSheet">
+           <string>
+            QPushButton {
+              background-color: #fffaf0;
+              color: #744210;
+              border: 1.5px solid #fbd38d;
+              border-radius: 10px;
+              font-size: 14px;
+              text-align: left;
+              padding-left: 16px;
+            }
+            QPushButton:hover { background-color: #feebc8; }
+           </string>
+          </property>
+         </widget>
+        </item>
+        <!-- Subject Tags -->
+        <item>
+         <widget class="QLabel">
+          <property name="text">
+           <string>Môn học gần đây</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: #718096; font-size: 12px; margin-top: 8px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QPushButton">
+            <property name="text"><string>Toán</string></property>
+            <property name="styleSheet">
+             <string>QPushButton{background:#ebf8ff;color:#2b6cb0;border:none;border-radius:6px;padding:4px 10px;font-size:12px;}QPushButton:hover{background:#bee3f8;}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton">
+            <property name="text"><string>Lý</string></property>
+            <property name="styleSheet">
+             <string>QPushButton{background:#fff5f5;color:#c53030;border:none;border-radius:6px;padding:4px 10px;font-size:12px;}QPushButton:hover{background:#fed7d7;}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton">
+            <property name="text"><string>Hóa</string></property>
+            <property name="styleSheet">
+             <string>QPushButton{background:#f0fff4;color:#276749;border:none;border-radius:6px;padding:4px 10px;font-size:12px;}QPushButton:hover{background:#c6f6d5;}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer>
+   <property name="sizeHint" stdset="0">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+            <property name="orientation"><enum>Qt::Horizontal</enum></property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer>
+   <property name="sizeHint" stdset="0">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+          <property name="orientation"><enum>Qt::Vertical</enum></property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <!-- Recent Chats Panel -->
+     <item>
+      <widget class="QFrame" name="recentChatsFrame">
+       <property name="styleSheet">
+        <string>
+         QFrame {
+           background-color: #ffffff;
+           border-radius: 14px;
+           border: 1px solid #e2e8f0;
+         }
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <property name="leftMargin">
+  <number>20</number>
+ </property>
+ <property name="topMargin">
+  <number>20</number>
+ </property>
+ <property name="rightMargin">
+  <number>20</number>
+ </property>
+ <property name="bottomMargin">
+  <number>20</number>
+ </property>
+        <property name="spacing">
+         <number>12</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout">
+          <item>
+           <widget class="QLabel">
+            <property name="text">
+             <string>🕐 Lịch Sử Chat</string>
+            </property>
+            <property name="styleSheet">
+             <string>color: #2d3748; font-size: 15px; font-weight: bold;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer>
+   <property name="sizeHint" stdset="0">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnSeeAllChats">
+            <property name="text"><string>Xem tất cả →</string></property>
+            <property name="styleSheet">
+             <string>QPushButton{background:transparent;border:none;color:#4a6cf7;font-size:13px;}QPushButton:hover{color:#3b5bdb;}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <!-- Chat History List -->
+        <item>
+         <widget class="QListWidget" name="recentChatsList">
+          <property name="styleSheet">
+           <string>
+            QListWidget {
+              border: none;
+              background: transparent;
+            }
+            QListWidget::item {
+              padding: 10px 8px;
+              border-radius: 8px;
+              color: #4a5568;
+              font-size: 13px;
+              border-bottom: 1px solid #f0f4f8;
+            }
+            QListWidget::item:hover {
+              background-color: #f7fafc;
+              color: #2d3748;
+            }
+            QListWidget::item:selected {
+              background-color: #ebf4ff;
+              color: #2b6cb0;
+            }
+           </string>
+          </property>
+          <item>
+           <property name="text"><string>💬  Giải phương trình bậc 2  ·  30 phút trước</string></property>
+          </item>
+          <item>
+           <property name="text"><string>💬  Định luật Newton và bài tập  ·  2 giờ trước</string></property>
+          </item>
+          <item>
+           <property name="text"><string>💬  Phản ứng hóa học oxi hóa khử  ·  Hôm qua</string></property>
+          </item>
+          <item>
+           <property name="text"><string>💬  Giải tích tích phân cơ bản  ·  2 ngày trước</string></property>
+          </item>
+          <item>
+           <property name="text"><string>💬  Ngữ pháp tiếng Anh nâng cao  ·  3 ngày trước</string></property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <!-- Progress Panel -->
+     <item>
+      <widget class="QFrame" name="progressFrame">
+       <property name="minimumWidth">
+        <number>220</number>
+       </property>
+       <property name="maximumWidth">
+        <number>260</number>
+       </property>
+       <property name="styleSheet">
+        <string>
+         QFrame {
+           background-color: #ffffff;
+           border-radius: 14px;
+           border: 1px solid #e2e8f0;
+         }
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <property name="leftMargin">
+  <number>20</number>
+ </property>
+ <property name="topMargin">
+  <number>20</number>
+ </property>
+ <property name="rightMargin">
+  <number>20</number>
+ </property>
+ <property name="bottomMargin">
+  <number>20</number>
+ </property>
+        <property name="spacing">
+         <number>14</number>
+        </property>
+        <item>
+         <widget class="QLabel">
+          <property name="text">
+           <string>📈 Tiến Độ Môn</string>
+          </property>
+          <property name="styleSheet">
+           <string>color: #2d3748; font-size: 15px; font-weight: bold;</string>
+          </property>
+         </widget>
+        </item>
+        <!-- Subject Progress Items -->
+        <!-- Toán -->
+        <item>
+         <layout class="QVBoxLayout">
+          <property name="spacing"><number>5</number></property>
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel">
+              <property name="text"><string>Toán</string></property>
+              <property name="styleSheet"><string>color:#4a5568;font-size:13px;</string></property>
+             </widget>
+            </item>
+            <item><spacer>
+   <property name="sizeHint" stdset="0">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+            <item>
+             <widget class="QLabel">
+              <property name="text"><string>78%</string></property>
+              <property name="styleSheet"><string>color:#4a6cf7;font-size:13px;font-weight:bold;</string></property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QProgressBar" name="progressToan">
+            <property name="value"><number>78</number></property>
+            <property name="textVisible"><bool>false</bool></property>
+            <property name="minimumHeight"><number>8</number></property>
+            <property name="maximumHeight"><number>8</number></property>
+            <property name="styleSheet">
+             <string>
+              QProgressBar { background:#e2e8f0; border-radius:4px; border:none; }
+              QProgressBar::chunk { background:#4a6cf7; border-radius:4px; }
+             </string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <!-- Lý -->
+        <item>
+         <layout class="QVBoxLayout">
+          <property name="spacing"><number>5</number></property>
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel">
+              <property name="text"><string>Vật Lý</string></property>
+              <property name="styleSheet"><string>color:#4a5568;font-size:13px;</string></property>
+             </widget>
+            </item>
+            <item><spacer>
+   <property name="sizeHint" stdset="0">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+            <item>
+             <widget class="QLabel">
+              <property name="text"><string>65%</string></property>
+              <property name="styleSheet"><string>color:#e53e3e;font-size:13px;font-weight:bold;</string></property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QProgressBar" name="progressLy">
+            <property name="value"><number>65</number></property>
+            <property name="textVisible"><bool>false</bool></property>
+            <property name="minimumHeight"><number>8</number></property>
+            <property name="maximumHeight"><number>8</number></property>
+            <property name="styleSheet">
+             <string>QProgressBar{background:#e2e8f0;border-radius:4px;border:none;}QProgressBar::chunk{background:#e53e3e;border-radius:4px;}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <!-- Hóa -->
+        <item>
+         <layout class="QVBoxLayout">
+          <property name="spacing"><number>5</number></property>
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel">
+              <property name="text"><string>Hóa Học</string></property>
+              <property name="styleSheet"><string>color:#4a5568;font-size:13px;</string></property>
+             </widget>
+            </item>
+            <item><spacer>
+   <property name="sizeHint" stdset="0">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+            <item>
+             <widget class="QLabel">
+              <property name="text"><string>82%</string></property>
+              <property name="styleSheet"><string>color:#38a169;font-size:13px;font-weight:bold;</string></property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QProgressBar" name="progressHoa">
+            <property name="value"><number>82</number></property>
+            <property name="textVisible"><bool>false</bool></property>
+            <property name="minimumHeight"><number>8</number></property>
+            <property name="maximumHeight"><number>8</number></property>
+            <property name="styleSheet">
+             <string>QProgressBar{background:#e2e8f0;border-radius:4px;border:none;}QProgressBar::chunk{background:#38a169;border-radius:4px;}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <!-- Anh -->
+        <item>
+         <layout class="QVBoxLayout">
+          <property name="spacing"><number>5</number></property>
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel">
+              <property name="text"><string>Tiếng Anh</string></property>
+              <property name="styleSheet"><string>color:#4a5568;font-size:13px;</string></property>
+             </widget>
+            </item>
+            <item><spacer>
+   <property name="sizeHint" stdset="0">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+            <item>
+             <widget class="QLabel">
+              <property name="text"><string>91%</string></property>
+              <property name="styleSheet"><string>color:#d69e2e;font-size:13px;font-weight:bold;</string></property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QProgressBar" name="progressAnh">
+            <property name="value"><number>91</number></property>
+            <property name="textVisible"><bool>false</bool></property>
+            <property name="minimumHeight"><number>8</number></property>
+            <property name="maximumHeight"><number>8</number></property>
+            <property name="styleSheet">
+             <string>QProgressBar{background:#e2e8f0;border-radius:4px;border:none;}QProgressBar::chunk{background:#d69e2e;border-radius:4px;}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer>
+   <property name="sizeHint" stdset="0">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+          <property name="orientation"><enum>Qt::Vertical</enum></property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

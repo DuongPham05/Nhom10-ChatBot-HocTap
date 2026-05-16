@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PlannerPage</class>
+ <widget class="QWidget" name="PlannerPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Lịch Học</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QWidget {
+      background-color: #f7f8fc;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #2d3748;
+    }
+    QLabel#pageTitle {
+      color: #1a1f2e;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    QFrame.card {
+      background-color: #ffffff;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+    }
+    QPushButton.btn-icon {
+      background-color: #f7f8fc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 13px;
+      color: #4a5568;
+    }
+    QPushButton.btn-icon:hover {
+      background-color: #edf2f7;
+    }
+    QPushButton.btn-primary {
+      background-color: #4a6cf7;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    QPushButton.btn-primary:hover {
+      background-color: #3b5bdb;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <!-- Header -->
+   <item>
+    <widget class="QFrame" name="headerFrame">
+     <property name="minimumHeight">
+      <number>70</number>
+     </property>
+     <property name="styleSheet">
+      <string>QFrame#headerFrame{background:#ffffff;border-bottom:1px solid #e2e8f0;}</string>
+     </property>
+     <layout class="QHBoxLayout" name="headerLayout">
+      <property name="leftMargin">
+       <number>28</number>
+      </property>
+      <property name="topMargin">
+       <number>20</number>
+      </property>
+      <property name="rightMargin">
+       <number>28</number>
+      </property>
+      <property name="bottomMargin">
+       <number>20</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="pageTitle">
+        <property name="text">
+         <string>📅 Lịch Học</string>
+        </property>
+        <property name="styleSheet">
+         <string>font-size:24px; font-weight:bold; color:#1a1f2e;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnWeekView">
+        <property name="text">
+         <string>Tuần</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton{background:#f7f8fc; color:#2d3748; border:1px solid #e2e8f0; border-radius:8px; padding:6px 16px; font-size:13px;}
+QPushButton:checked{background:#4a6cf7; color:white; border:none;}
+QPushButton:hover:!checked{background:#edf2f7; color:#2d3748;}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDayView">
+        <property name="text">
+         <string>Ngày</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton{background:#f7f8fc; color:#2d3748; border:1px solid #e2e8f0; border-radius:8px; padding:6px 16px; font-size:13px;}
+QPushButton:checked{background:#4a6cf7; color:white; border:none;}
+QPushButton:hover:!checked{background:#edf2f7; color:#2d3748;}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnAddTask">
+        <property name="text">
+         <string>+ Thêm Nhiệm Vụ</string>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton{background:#4a6cf7; color:white; border:none; border-radius:10px; padding:8px 18px; font-size:13px; font-weight:600;}
+QPushButton:hover{background:#3b5bdb;}</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <!-- Nội dung chính: 2 cột -->
+   <item>
+    <layout class="QHBoxLayout" name="contentLayout">
+     <property name="spacing">
+      <number>24</number>
+     </property>
+     <property name="leftMargin">
+      <number>24</number>
+     </property>
+     <property name="topMargin">
+      <number>20</number>
+     </property>
+     <property name="rightMargin">
+      <number>24</number>
+     </property>
+     <property name="bottomMargin">
+      <number>24</number>
+     </property>
+     <!-- Cột trái: Lịch tuần + Danh sách nhiệm vụ hôm nay -->
+     <item>
+      <layout class="QVBoxLayout" name="leftColumn">
+       <property name="spacing">
+        <number>20</number>
+       </property>
+       <!-- Khung lịch tuần -->
+       <item>
+        <widget class="QFrame" name="calendarFrame">
+         <property name="styleSheet">
+          <string>QFrame{background:#ffffff; border-radius:16px; border:1px solid #e2e8f0;}</string>
+         </property>
+         <layout class="QVBoxLayout" name="calendarLayout">
+          <property name="leftMargin">
+           <number>16</number>
+          </property>
+          <property name="topMargin">
+           <number>16</number>
+          </property>
+          <property name="rightMargin">
+           <number>16</number>
+          </property>
+          <property name="bottomMargin">
+           <number>16</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="weekNavLayout">
+            <item>
+             <widget class="QPushButton" name="btnPrevWeek">
+              <property name="text">
+               <string>‹</string>
+              </property>
+              <property name="styleSheet">
+               <string>QPushButton{background:#f7f8fc; color:#2d3748; border:1px solid #e2e8f0; border-radius:8px; font-size:18px; width:32px; height:32px;}
+QPushButton:hover{background:#edf2f7; color:#2d3748;}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="weekLabel">
+              <property name="text">
+               <string>Tháng 5, 2026</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="styleSheet">
+               <string>font-size:15px; font-weight:bold; color:#2d3748;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnNextWeek">
+              <property name="text">
+               <string>›</string>
+              </property>
+              <property name="styleSheet">
+               <string>QPushButton{background:#f7f8fc; color:#2d3748; border:1px solid #e2e8f0; border-radius:8px; font-size:18px; width:32px; height:32px;}
+QPushButton:hover{background:#edf2f7; color:#2d3748;}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="weekCalendar">
+            <property name="alternatingRowColors">
+             <bool>false</bool>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::SingleSelection</enum>
+            </property>
+            <property name="selectionBehavior">
+             <enum>QAbstractItemView::SelectItems</enum>
+            </property>
+            <property name="showGrid">
+             <bool>false</bool>
+            </property>
+            <property name="rowCount">
+             <number>1</number>
+            </property>
+            <property name="columnCount">
+             <number>7</number>
+            </property>
+            <row/>
+            <column>
+             <property name="text">
+              <string>T2</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>T3</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>T4</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>T5</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>T6</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>T7</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>CN</string>
+             </property>
+            </column>
+            <property name="styleSheet">
+             <string>
+              QTableWidget {
+                border: none;
+                gridline-color: #f0f4f8;
+                background: transparent;
+              }
+              QTableWidget::item {
+                padding: 8px;
+                border-radius: 8px;
+              }
+              QTableWidget::item:selected {
+                background-color: #ebf4ff;
+                color: #2b6cb0;
+              }
+              QHeaderView::section {
+                background-color: #f7f8fc;
+                color: #4a5568;
+                font-size: 13px;
+                font-weight: bold;
+                border: none;
+                padding: 8px;
+              }
+             </string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <!-- Khung nhiệm vụ hôm nay -->
+       <item>
+        <widget class="QFrame" name="todayTasksFrame">
+         <property name="styleSheet">
+          <string>QFrame{background:#ffffff; border-radius:16px; border:1px solid #e2e8f0;}</string>
+         </property>
+         <layout class="QVBoxLayout" name="todayTasksLayout">
+          <property name="leftMargin">
+           <number>16</number>
+          </property>
+          <property name="topMargin">
+           <number>16</number>
+          </property>
+          <property name="rightMargin">
+           <number>16</number>
+          </property>
+          <property name="bottomMargin">
+           <number>16</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel" name="todayLabel">
+              <property name="text">
+               <string>📋 Hôm nay</string>
+              </property>
+              <property name="styleSheet">
+               <string>font-size:14px; font-weight:bold; color:#1a1f2e;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <!-- Cột phải: Pomodoro + Buổi học mới + Form thêm task nhanh -->
+     <item>
+      <layout class="QVBoxLayout" name="rightColumn">
+       <property name="spacing">
+        <number>20</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <!-- Pomodoro Timer placeholder -->
+       <item>
+        <widget class="QFrame" name="pomodoroPlaceholder">
+         <property name="minimumHeight">
+          <number>0</number>
+         </property>
+         <property name="styleSheet">
+          <string>QFrame{background:transparent; border:none;}</string>
+         </property>
+         <layout class="QVBoxLayout" name="pomodoroLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+         </layout>
+        </widget>
+       </item>
+       <!-- Learning Session placeholder -->
+       <item>
+        <widget class="QFrame" name="learningSessionPlaceholder">
+         <property name="styleSheet">
+          <string>QFrame{background:transparent; border:none;}</string>
+         </property>
+         <layout class="QVBoxLayout" name="learningSessionLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+         </layout>
+        </widget>
+       </item>
+       <!-- Form thêm nhiệm vụ nhanh -->
+       <item>
+        <widget class="QFrame" name="quickAddFrame">
+         <property name="styleSheet">
+          <string>QFrame{background:#ffffff; border-radius:16px; border:1px solid #e2e8f0;}</string>
+         </property>
+         <layout class="QVBoxLayout" name="quickAddLayout">
+          <property name="leftMargin">
+           <number>16</number>
+          </property>
+          <property name="topMargin">
+           <number>16</number>
+          </property>
+          <property name="rightMargin">
+           <number>16</number>
+          </property>
+          <property name="bottomMargin">
+           <number>16</number>
+          </property>
+          <property name="spacing">
+           <number>12</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="quickAddTitle">
+            <property name="text">
+             <string>➕ Thêm Nhiệm Vụ Nhanh</string>
+            </property>
+            <property name="styleSheet">
+             <string>font-size:14px; font-weight:bold; color:#1a1f2e;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="taskNameInput">
+            <property name="placeholderText">
+             <string>Tên nhiệm vụ...</string>
+            </property>
+            <property name="styleSheet">
+             <string>QLineEdit{background:#f7f8fc; color:#2d3748; border:1px solid #e2e8f0; border-radius:8px; padding:8px 12px; font-size:13px;}
+QLineEdit:focus{border-color:#4a6cf7; background:#ffffff; color:#2d3748;}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="quickSubjectLayout">
+            <item>
+             <widget class="QComboBox" name="taskSubjectCombo">
+              <property name="minimumWidth">
+               <number>120</number>
+              </property>
+              <property name="styleSheet">
+               <string>QComboBox{background:#f7f8fc; color:#2d3748; border:1px solid #e2e8f0; border-radius:8px; padding:6px 8px; font-size:13px;}
+QComboBox:focus{border-color:#4a6cf7; color:#2d3748;}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="taskDateEdit">
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+              <property name="styleSheet">
+               <string>QDateEdit{background:#f7f8fc; color:#2d3748; border:1px solid #e2e8f0; border-radius:8px; padding:6px 8px; font-size:13px;}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTimeEdit" name="taskTimeEdit">
+              <property name="styleSheet">
+               <string>QTimeEdit{background:#f7f8fc; color:#2d3748; border:1px solid #e2e8f0; border-radius:8px; padding:6px 8px; font-size:13px;}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="quickPriorityLayout">
+            <item>
+             <widget class="QLabel" name="priorityLabel">
+              <property name="text">
+               <string>Ưu tiên:</string>
+              </property>
+              <property name="styleSheet">
+               <string>color:#4a5568; font-size:12px;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="priorityHigh">
+              <property name="text">
+               <string>🔴 Cao</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="styleSheet">
+               <string>QPushButton{background:#fff5f5; color:#c53030; border:1px solid #fed7d7; border-radius:8px; padding:4px 12px; font-size:12px;}
+QPushButton:checked{background:#fed7d7; border-color:#c53030;}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="priorityMed">
+              <property name="text">
+               <string>🟡 TB</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+              <property name="styleSheet">
+               <string>QPushButton{background:#fffff0; color:#744210; border:1px solid #fefcbf; border-radius:8px; padding:4px 12px; font-size:12px;}
+QPushButton:checked{background:#fefcbf; border-color:#d69e2e;}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="priorityLow">
+              <property name="text">
+               <string>🟢 Thấp</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="styleSheet">
+               <string>QPushButton{background:#f0fff4; color:#276749; border:1px solid #c6f6d5; border-radius:8px; padding:4px 12px; font-size:12px;}
+QPushButton:checked{background:#c6f6d5; border-color:#38a169;}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="taskDurationSpin">
+              <property name="suffix">
+               <string> phút</string>
+              </property>
+              <property name="minimum">
+               <number>15</number>
+              </property>
+              <property name="maximum">
+               <number>480</number>
+              </property>
+              <property name="singleStep">
+               <number>15</number>
+              </property>
+              <property name="value">
+               <number>60</number>
+              </property>
+              <property name="styleSheet">
+               <string>QSpinBox{background:#f7f8fc; color:#2d3748; border:1px solid #e2e8f0; border-radius:8px; padding:4px 8px; font-size:12px;}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="taskNotesInput">
+            <property name="placeholderText">
+             <string>Ghi chú (tuỳ chọn)...</string>
+            </property>
+            <property name="maximumHeight">
+             <number>60</number>
+            </property>
+            <property name="styleSheet">
+             <string>QPlainTextEdit{background:#f7f8fc; color:#2d3748; border:1px solid #e2e8f0; border-radius:8px; padding:8px; font-size:12px;}
+QPlainTextEdit:focus{border-color:#4a6cf7; background:#ffffff; color:#2d3748;}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="quickAddButtons">
+            <item>
+             <widget class="QPushButton" name="btnCancelTask">
+              <property name="text">
+               <string>Hủy</string>
+              </property>
+              <property name="styleSheet">
+               <string>QPushButton{background:#f7f8fc; color:#4a5568; border:1px solid #e2e8f0; border-radius:8px; padding:6px 12px;}
+QPushButton:hover{background:#edf2f7; color:#4a5568;}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnSaveTask">
+              <property name="text">
+               <string>💾 Lưu Nhiệm Vụ</string>
+              </property>
+              <property name="styleSheet">
+               <string>QPushButton{background:#4a6cf7; color:white; border:none; border-radius:8px; padding:6px 16px; font-weight:600;}
+QPushButton:hover{background:#3b5bdb;}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

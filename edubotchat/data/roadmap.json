@@ -1,0 +1,490 @@
+[
+  {
+    "name": "Toán học",
+    "icon": "📐",
+    "color": "#e53e3e",
+    "topics": [
+      {
+        "id": "00df0d9a-0a0b-4f05-b6f0-87ec2d4e0b88",
+        "name": "Giới hạn và liên tục",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "983fc3f1-9ee9-4b9b-80ac-0e81d7e214f8",
+        "name": "Đạo hàm cơ bản",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "9aa44d96-4320-4d0b-a091-db9370860785",
+        "name": "Đạo hàm hàm hợp",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "7f732f4b-13a5-41f6-ae08-64caaf6e0082",
+        "name": "Tích phân bất định",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "95785900-97d8-4e94-a694-30e570d5e4a9",
+        "name": "Tích phân xác định",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "9579f8ef-996b-423a-809c-6e0dbe0ccf8e",
+        "name": "Ứng dụng tích phân",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      }
+    ],
+    "expanded": true
+  },
+  {
+    "name": "Vật lý",
+    "icon": "⚛️",
+    "color": "#dd6b20",
+    "topics": [
+      {
+        "id": "07f2879b-2b07-4ea4-b822-93a7ead085be",
+        "name": "Động học chất điểm",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "6be2dddd-b889-4e71-9a4e-d86226b0253c",
+        "name": "Động lực học Newton",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "0bde1f36-34be-46d5-8a0b-cdd57c51ad17",
+        "name": "Năng lượng và công",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "788f558e-61fd-4d18-a753-fb4fa906ba59",
+        "name": "Động lượng",
+        "status": "in_progress",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "626468bb-e826-4573-b268-e02ff09b9ecc",
+        "name": "Dao động cơ",
+        "status": "locked",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "5976b28c-680f-4a30-b95a-a4a2842d64ae",
+        "name": "Sóng cơ học",
+        "status": "locked",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      }
+    ],
+    "expanded": true
+  },
+  {
+    "name": "Hóa học",
+    "icon": "🧪",
+    "color": "#38a169",
+    "topics": [
+      {
+        "id": "6368b107-952a-4592-9be7-2305a39fa39d",
+        "name": "Nguyên tử và bảng tuần hoàn",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "1bd90cb9-1ea6-4edd-92d1-1d7b704d7954",
+        "name": "Liên kết hóa học",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "c34187fd-e11d-4c69-99d0-c0ec88dcc11a",
+        "name": "Phản ứng oxi hóa khử",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "f95a3b41-5b73-4396-a6a9-c9190bd65b04",
+        "name": "Điện phân",
+        "status": "in_progress",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "0e143d8d-50e0-4353-8850-eee96c7cd786",
+        "name": "Hóa hữu cơ cơ bản",
+        "status": "locked",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "5bd9e6c2-b527-4da0-91f3-cc46cbb39052",
+        "name": "Polymer và ứng dụng",
+        "status": "locked",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      }
+    ],
+    "expanded": false
+  },
+  {
+    "name": "Tiếng Anh",
+    "icon": "🇬🇧",
+    "color": "#3182ce",
+    "topics": [
+      {
+        "id": "0ad6ca48-7ee2-460d-bb4d-8c4e62051f66",
+        "name": "Ngữ pháp thì cơ bản",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "eb70515b-b4f1-4cfc-8bcc-b845b58232ee",
+        "name": "Thì hoàn thành",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "55b1c0b1-9b58-49f0-89e5-317dce0155ce",
+        "name": "Câu điều kiện",
+        "status": "done",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "a2bece96-9dc8-4155-af58-33818b32b080",
+        "name": "Từ vựng B1 – chủ đề 1",
+        "status": "in_progress",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "d83e93a4-679a-4710-9205-6ef8f04469d0",
+        "name": "Viết luận cơ bản",
+        "status": "locked",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      },
+      {
+        "id": "7845628d-cbb8-458d-887b-7e590c80f956",
+        "name": "Kỹ năng đọc hiểu",
+        "status": "locked",
+        "detail": "",
+        "estimated_h": 1.5,
+        "resource_urls": []
+      }
+    ],
+    "expanded": true
+  },
+  {
+    "name": "Python",
+    "icon": "📌",
+    "color": "#a0aec0",
+    "topics": [
+      {
+        "id": "7939ea18-768e-47f7-9cb2-8beb3ec6cc44",
+        "name": "Chủ đề 1",
+        "status": "in_progress",
+        "detail": "Nội dung ôn tập: Chủ đề 1 môn Python",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "0cac71d7-5137-4b4a-8bea-c5b017e0a7c7",
+        "name": "Chủ đề 2",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 2 môn Python",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "02ff7f54-c520-44f0-a094-a7535edfc195",
+        "name": "Chủ đề 3",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 3 môn Python",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "6ed19c47-9882-4d80-a04d-6526b8854aaf",
+        "name": "Chủ đề 4",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 4 môn Python",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "cef22ca1-7fb3-4093-abd9-a9960a61e316",
+        "name": "Chủ đề 5",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 5 môn Python",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "b5526960-de37-47db-a08f-5cd19c7b0ea6",
+        "name": "Chủ đề 6",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 6 môn Python",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "bff71ca9-6709-4595-9a3c-556a095c8b98",
+        "name": "Chủ đề 7",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 7 môn Python",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "9f62808c-65c6-4764-935c-5db3a3ef8e6b",
+        "name": "Chủ đề 8",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 8 môn Python",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "f64c609c-5f53-4dee-a3c3-de88854d793b",
+        "name": "Chủ đề 9",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 9 môn Python",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "821756cb-bfc7-4b2a-86a3-764946147e73",
+        "name": "Chủ đề 10",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 10 môn Python",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      }
+    ],
+    "expanded": false
+  },
+  {
+    "name": "ngôn ngữ Trung",
+    "icon": "📌",
+    "color": "#a0aec0",
+    "topics": [
+      {
+        "id": "e394233a-d6ef-4aaf-9488-185ff0311538",
+        "name": "Chủ đề 1",
+        "status": "in_progress",
+        "detail": "Nội dung ôn tập: Chủ đề 1 môn ngôn ngữ Trung",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "18f2977f-06d4-45e5-9bea-ded497efbb6a",
+        "name": "Chủ đề 2",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 2 môn ngôn ngữ Trung",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "30c3850b-807c-46da-871a-87b0cef770f9",
+        "name": "Chủ đề 3",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 3 môn ngôn ngữ Trung",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "034a5b17-17ad-4b3c-ba49-12691ac43652",
+        "name": "Chủ đề 4",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 4 môn ngôn ngữ Trung",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "ef11c53c-1d88-4c23-b889-1da9bf1e89fb",
+        "name": "Chủ đề 5",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 5 môn ngôn ngữ Trung",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "2a8e697a-7151-49b4-840b-721348083ef4",
+        "name": "Chủ đề 6",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 6 môn ngôn ngữ Trung",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "14b97ec5-690a-40c5-b02c-0671ff8f34d7",
+        "name": "Chủ đề 7",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 7 môn ngôn ngữ Trung",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "0fd6f173-7f29-458e-be30-74e6d89eaffc",
+        "name": "Chủ đề 8",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 8 môn ngôn ngữ Trung",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "67b2e0a6-f05c-425f-a367-f16cf77f9526",
+        "name": "Chủ đề 9",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 9 môn ngôn ngữ Trung",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "29baee2e-dfcc-4b94-ba20-df8ebce04714",
+        "name": "Chủ đề 10",
+        "status": "locked",
+        "detail": "Nội dung ôn tập: Chủ đề 10 môn ngôn ngữ Trung",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      }
+    ],
+    "expanded": false
+  },
+  {
+    "name": "Tiếng Mỹ",
+    "icon": "📌",
+    "color": "#a0aec0",
+    "topics": [
+      {
+        "id": "658293de-3ab5-4afe-af43-d248bde27f32",
+        "name": "Bảng chữ cái và cách phát âm cơ bản",
+        "status": "in_progress",
+        "detail": "Nội dung: Bảng chữ cái và cách phát âm cơ bản – Tiếng Mỹ (trình độ beginner)",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "c7a1afab-2beb-4ba0-a576-76803c5307dc",
+        "name": "Chào hỏi và giới thiệu bản thân",
+        "status": "locked",
+        "detail": "Nội dung: Chào hỏi và giới thiệu bản thân – Tiếng Mỹ (trình độ beginner)",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "e3affe8e-f7e4-4069-9d33-5c3f5650792d",
+        "name": "Số đếm, màu sắc, ngày tháng",
+        "status": "locked",
+        "detail": "Nội dung: Số đếm, màu sắc, ngày tháng – Tiếng Mỹ (trình độ beginner)",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "ca56efd9-797c-4513-8698-9b9ed3a67892",
+        "name": "Các câu hỏi cơ bản (Wh-questions)",
+        "status": "locked",
+        "detail": "Nội dung: Các câu hỏi cơ bản (Wh-questions) – Tiếng Mỹ (trình độ beginner)",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "2a89957f-d8e4-4bb1-88c1-a5e1c275307b",
+        "name": "Gia đình và bạn bè",
+        "status": "locked",
+        "detail": "Nội dung: Gia đình và bạn bè – Tiếng Mỹ (trình độ beginner)",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "c114e91a-69ba-45cf-a08e-1079835e3fbc",
+        "name": "Đồ ăn và thức uống",
+        "status": "locked",
+        "detail": "Nội dung: Đồ ăn và thức uống – Tiếng Mỹ (trình độ beginner)",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "b5b1f1ff-47a2-4a5a-9edc-afded4786601",
+        "name": "Mô tả người và vật",
+        "status": "locked",
+        "detail": "Nội dung: Mô tả người và vật – Tiếng Mỹ (trình độ beginner)",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "3943ebf8-ef3c-40dd-9936-a4e57f9511d0",
+        "name": "Thì hiện tại đơn",
+        "status": "locked",
+        "detail": "Nội dung: Thì hiện tại đơn – Tiếng Mỹ (trình độ beginner)",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "502eb5a5-a4cc-4ab2-b9d5-068c585d3aec",
+        "name": "Luyện nghe và nói các đoạn hội thoại ngắn",
+        "status": "locked",
+        "detail": "Nội dung: Luyện nghe và nói các đoạn hội thoại ngắn – Tiếng Mỹ (trình độ beginner)",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      },
+      {
+        "id": "6719d195-73ba-4530-9587-bca36d2ba450",
+        "name": "Văn hóa Mỹ cơ bản",
+        "status": "locked",
+        "detail": "Nội dung: Văn hóa Mỹ cơ bản – Tiếng Mỹ (trình độ beginner)",
+        "estimated_h": 2.0,
+        "resource_urls": []
+      }
+    ],
+    "expanded": true
+  }
+]
