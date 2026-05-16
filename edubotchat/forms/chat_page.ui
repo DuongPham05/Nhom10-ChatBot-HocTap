@@ -88,7 +88,7 @@
             border: none;
             border-radius: 10px;
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 650;
           }
           QPushButton:hover { background-color: #3b5bdb; }
           QPushButton:pressed { background-color: #2f4ac7; }
