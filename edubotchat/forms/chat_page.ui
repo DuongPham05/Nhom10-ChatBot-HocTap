@@ -71,7 +71,7 @@
  <property name="bottomMargin">
   <number>12</number>
  </property>
-      <!-- New Chat Button -->
+      
       <item>
        <widget class="QPushButton" name="btnNewChat">
         <property name="text">
