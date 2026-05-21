@@ -28,6 +28,7 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QButtonGroup, QMessageBox
 from PyQt6.QtCore    import Qt, QSize
 from PyQt6.QtGui     import QIcon, QFont
 from PyQt6           import uic
+from PyQt6           import uic
 
 from src.models.settings          import AppSettings
 from src.models.app_state         import AppState
