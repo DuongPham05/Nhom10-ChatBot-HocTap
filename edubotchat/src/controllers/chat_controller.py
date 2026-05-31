@@ -9,9 +9,9 @@ from src.controllers.base_controller import BaseController
 from src.api.ai_service import AIService
 from google.genai import types  # Dùng cho định nghĩa tool schema
 
-# ----------------------------------------------------------------------
+
 # Worker thread để gọi AI (có thể call tool)
-# ----------------------------------------------------------------------
+
 class BotWorker(QThread):
     """Chạy gọi API Gemini trong thread riêng, hỗ trợ tool calling."""
     response_ready = pyqtSignal(str)           # Dùng cho response text thường
@@ -59,9 +59,9 @@ class BotWorker(QThread):
         self.response_ready.emit(reply.strip())
 
 
-# ----------------------------------------------------------------------
+
 # ChatController – quản lý giao diện chat và tích hợp AI Agent
-# ----------------------------------------------------------------------
+
 class ChatController(BaseController):
     new_session_created = pyqtSignal(str)
 
